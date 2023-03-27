@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin page</title>
+<link rel="stylesheet" href="Sadmin.css">
+<style> body{
+background-image: url('https://i.pinimg.com/originals/0c/ea/6f/0cea6fabe4d9d5256e0d1b2474927732.jpg');
+background-size: 1547px 720px; }
+.middle{
+padding:20px 20px;
+margin-left:auto;
+         margin-right:auto; height:400px; width:500px;
+}
+</style> </head> <script>
+function myFunction() { alert("Continue to LOGOUT"); }
+</script>
+<body>
+<div class="topnav">
+<a class="active" href="home.html">Home</a> <a href="constant.html">Contact</a>
+<a href="teachnotifi.html">Notifications</a> <a href="search.html">Student Search</a>
+<a onclick="myFunction()" href="home.html">LogOut</a> </div>
+<div class="middle">
+<div class="row">
+<div class="column"> <div class="card">
+<div class="container">
+<h2>Attendance</h2>
+<p>Manage Attendance here:</p>
+<p><a href="attendance.html"><button class="button">GO</button></a></p>
+</div> </div>
+</div>
+<div class="row"> <div class="column">
+<div class="card">
+<div class="container">
+<h2>Mark Sheet</h2>
+<p>Manage marks here </p>
+<p><a href="marks.html"><button class="button">GO</button></a></p>
+</div> </div>
+</div>
+</div>
+<div class="row"> <div class="column">
+<div class="card">
+<div class="container">
+<h2>Registered student log:</h2>
+<p>Manage registered students</p>
+<p> <form method="POST" action="regtab.php">
+<button formaction="regtab.php" class="button">Go</button> </form> </p>
+</div> </div>
+</div>
+</div> </body> </html>

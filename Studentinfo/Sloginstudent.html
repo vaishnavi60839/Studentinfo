@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login User</title>
+        <link rel="stylesheet" href="Sloginstudent.css">
+        <style>
+            body {
+                background-image: url('https://i.pinimg.com/originals/0c/ea/6f/0cea6fabe4d9d5256e0d1b2474927732.jpg');
+                background-size: 1600px 720px;
+            }
+            </style>
+    </head>
+    <script>
+        function myFunction() {
+            alert("Continue to login..");
+        }
+    </script>
+    <body class="background-image">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <h3>Login student</h3>
+            <br>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="psw">Password</label>
+                <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="UserName and Password dont match" required>
+                <button style="background-color:black" formation="student.html">Submit</button>
+                </form>
+        </div>
+        <script>
+            var myInput = document.getElementById("psw");
+            var letter = document.getElementById("letter");
+            var capital = document.getElementById("capital");
+            var number = document.getElementById("number");
+            var length = document.getElementById("length");
+            myInput.onfocus = function() {
+                document.getElementById("message").style.display = "block";
+            }
+            myInput.onblur = function() {
+                document.getElementById("message").style.display = "none";
+            }
+            myInput.onkeyup = function() {
+                var lowerCaseLetters = /[a-z]/g;
+                if(myInput.value.match(lowerCaseLetters)) {
+                    letter.classList.remove("invalid");
+                    letter.classList.add("valid");
+                }
+                else 
+                {
+                    letter.classList.remove("valid");
+                    letter.classList.add("invalid");
+                }
+                var upperCaseLetters = /[A-Z]/g;
+                if(myInput.value.match(upperCaseLetters)) {
+                    capital.classList.remove("valid");
+                    capital.classList.add("invalid");
+                }
+                var numbers = /[0-9]/g;
+                if(myInput.value.length >=8) {
+                    length.classList.remove("invalid");
+                    length.classList.add("valid");
+                }
+                else
+                {
+                    length.classList.remove("valid");
+                    length.classList.add("invalid");
+                }
+            }
+        </script>
+    </body>
+</html>

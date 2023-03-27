@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> <style>
+*{
+box-sizing: border-box;
+}
+body{background-image: url('https://media.istockphoto.com/photos/school-supplies-on-wooden-desk-table-background-back-to-school-flat-picture-id1159380456?k=20&m=1159380456&s=612x612&w=0&h=L6r9mqFFkJ5EsI3W0sBfBe4fe3iO47FLZyH8E4dIuxI=');
+                background-size: cover;
+                background-repeat: no-repeat; 
+}
+#myInput {
+background-image: url('/css/searchicon.png'); background-position: 10px 10px;
+         background-repeat: no-repeat; width: 100%;
+font-size: 16px;
+padding: 12px 20px 12px 40px; border: 1px solid #ddd; margin-bottom: 12px;
+}
+#myTable { border-collapse: collapse; width: 100%;
+border: 1px solid #ddd; font-size: 18px;
+}
+#myTable th, #myTable td { text-align: left;
+padding: 12px;
+}
+#myTable tr {
+border-bottom: 1px solid #ddd;
+}
+#myTable tr.header, #myTable tr:hover { background-color:black;
+}
+p{ font-size:28px; }
+</style> </head>
+         <body class="back"> <p style="color:white"> Student Details Search </p>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<table id="myTable" style="color:white"> <tr class="header">
+<th style="color:white" style="width:20%;">Rollno</th> <th style="color:white" style="width:20%;">Name</th>
+<th style="color:white" style="width:20%;">CGPA</th> <th style="color:white" style="width:20%;">Branch</th> <th style="color:white" style="width:20%;">Year</th>
+</tr> <tr>
+<td>319114110027</td> <td>Eva</td>
+<td>8.2</td> <td>CSE</td> <td>3rd year</td>
+</tr> <tr>
+<td>319114110012</td> <td>CH.Aruna</td> <td>8.0</td> <td>ECE</td> <td>3rd year</td>
+</tr> <tr>
+<td>319514102016</td>
+         <td>Vaishnavi</td> <td>9.0</td> <td>CSE</td> <td>3st year</td>
+</tr> <tr>
+<td>319514102010</td> <td>K.hema bhavani</td> <td>9.0</td> <td>EEE</td> <td>3rd year</td>
+</tr> <tr>
+<td>319514102001</td> <td>Akshaya</td> <td>8.0</td> <td>CSE</td> <td>3st year</td>
+</tr> <tr>
+<td>319514102012</td> <td>k.pragjna</td>
+<td>8.9</td> <td>MECH</td> <td>2nd year</td>
+</tr> <tr>
+<td>319114110044</td> <td>Rishitha</td>
+<td>9.2</td> <td>MECH</td> <td>4th year</td>
+</tr> <tr>
+<td>319514102022</td> <td>Karthik</td>
+<td>10</td> <td>CSE</td> <td>4th year</td>
+</tr> </table>
+<script>
+function myFunction() {
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("myInput"); filter = input.value.toUpperCase();
+table = document.getElementById("myTable"); tr = table.getElementsByTagName("tr");
+for (i = 0; i < tr.length; i++) {
+td = tr[i].getElementsByTagName("td")[0]; if (td) {
+txtValue = td.textContent || td.innerText;
+if (txtValue.toUpperCase().indexOf(filter) > -1) {
+tr[i].style.display = ""; } else {
+tr[i].style.display = "none"; }
+} }
+} </script> </body> </html>
